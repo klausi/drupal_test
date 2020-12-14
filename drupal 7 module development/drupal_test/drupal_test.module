@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * @file
+ *
+ * Implements hook_form_alter.
+ *
+ * Makes Employment Type uneditable if of type Freelance.
+ */
+
+function drupal_test_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'job_node_form') {
+    if ($form['field_employment_type']['und']['#default_value'][0] == 'Freelance') {
+      $form['field_employment_type']['#disabled'] = TRUE;
+    }
+
+  }
+
+}
