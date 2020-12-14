@@ -1,5 +1,0 @@
-name = Drupal Test
-description = Make Emplyment type of Freelance Jobs Non-Editable.
-core = 7.x
-files[] = drupal_test.module
-package = Custom Module
